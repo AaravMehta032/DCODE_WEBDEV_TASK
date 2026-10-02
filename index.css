@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Calibri", "Candara", "Segoe UI", "Optima", "Arial", "sans-serif";
+}
+
+body {
+    background-color: #F7EFE8;
+    color: #333;
+}
+
+
+/* Habit Tracker Heading */
+
+header {
+    background-color: #543523;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 15px;
+}
+
+
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+
+/* Sections */
+
+.section-box {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+}
+
+.section-box h2 {
+    color: #543523;
+    margin-bottom: 20px;
+}
+
+
+
+#habitName {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1.15rem;
+    margin-bottom: 15px;
+}
+
+
+/* Labels */
+
+.label-box {
+    margin-bottom: 10px;
+}
+
+.label-box label {
+    display: block;
+    color: #543523;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+#labelSelect {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-right: 5px;
+}
+
+#labelList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0px;
+}
+
+.label {
+    background-color: #F7EFE8;
+    border: 1px solid #543523;
+    padding: 6px 10px;
+    border-radius: 15px;
+    font-size: 1.15rem;
+}
+
+.label button {
+    background: none;
+    color: #B3261E;
+    border: none;
+    padding: 0 0 0 5px;
+    cursor: pointer;
+}
+
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #543523;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+    /* Reduces the brightness when you hover */
+}
+
+.small-btn {
+    margin-bottom: 10px;
+}
+
+.add-btn {
+    width: 100%;
+    background-color: #2E7D32;
+    font-size: 1.15rem;
+    margin-top: 10px;
+}
+
+
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    margin-bottom: 0;
+}
+
+
+.month-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.month-box label {
+    color: #543523;
+    font-weight: bold;
+}
+
+#month {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+
+.table-box {
+    width: 100%;
+    overflow-x: auto;
+    /* This says that if something is having a lot
+     of width then provide a scrollbar in horizontal
+    left right direction only if necessary */
+}
+
+table {
+    border-collapse: collapse;
+    /* The thing that there is a box for every cell inside a bigger box goes away
+    and now there is only one same line border for the whole table's things */
+    width: 100%;
+}
+
+.habit-heading {
+    min-width: 180px;
+    text-align: left;
+    padding: 12px;
+    color: #543523;
+    border-bottom: 2px solid #543523;
+}
+
+.day-heading {
+    min-width: 32px;
+    padding: 10px 5px;
+    color: #543523;
+    border-left: 1px dotted #777;
+    border-bottom: 2px solid #543523;
+    font-size: 12px;
+}
+
+.habit-row {
+    border-bottom: 1px dotted #777;
+}
+
+.habit-name {
+    padding: 10px;
+    min-width: 180px;
+    font-weight: bold;
+    color: #543523;
+}
+
+.habit-labels {
+    margin-top: 6px;
+}
+
+.small-label {
+    display: inline-block;
+    background-color: #F7EFE8;
+    color: #543523;
+    padding: 3px 6px;
+    border-radius: 10px;
+    font-size: 10px;
+    margin-right: 3px;
+    font-weight: normal;
+}
+
+.day-box {
+    width: 32px;
+    height: 40px;
+    border-left: 1px dotted #777;
+    cursor: pointer;
+}
+
+.day-box:hover {
+    background-color: #F7EFE8;
+}
+
+.day-box.completed {
+    background-color: #543523;
+}
+
+
+
+.delete-btn {
+    background-color: #B3261E;
+    font-size: 0.75rem;
+    padding: 4px 7px;
+    margin-left: 5px;
+}
+
+#summaryType {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.summary-name {
+    width: 180px;
+    color: #543523;
+    font-weight: bold;
+}
+
+.summary-progress {
+    flex: 1;
+    /* If there are two flex:1's then it's like 50-50 otherwise if only one then take all available space */
+    height: 12px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+/* If anything extends over the outer box then hide it --> auto = scroll and visible=outside */
+}
+
+.summary-progress-bar {
+    height: 100%;
+    background-color: #2E7D32;
+}
+
+.summary-percentage {
+    width: 50px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.summary-status {
+    width: 80px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.done {
+    color: #2E7D32;
+}
+
+.not-done {
+    color: #B3261E;
+}
+
+
+
+.summary-columns {
+    display: flex;
+    gap: 20px;
+}
+
+.summary-card {
+    flex: 1;
+    background-color: #F7EFE8;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.summary-card h2 {
+    font-size: 18px;
+}
+
+.summary-card p {
+    padding: 7px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+/* 
+@media (max-width: 600px) {
+
+    main {
+        width: 95%;
+    }
+
+    .section-box {
+        padding: 18px;
+    }
+
+    .section-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .summary-columns {
+        flex-direction: column;
+    }
+
+    .summary-item {
+        flex-wrap: wrap;
+    }
+
+    .summary-name {
+        width: 100%;
+    }
+
+    .summary-progress {
+        min-width: 150px;
+    }
+
+    .month-box {
+        width: 100%;
+    }
+} */

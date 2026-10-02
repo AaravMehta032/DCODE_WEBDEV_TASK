@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Habit Tracker</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Habit Tracker</h1>
+
+        <p>
+            Build good habits, one day at a time.
+        </p>
+
+    </header>
+
+
+    <main>
+
+        <!-- Add Habit -->
+
+        <section class="section-box">
+
+            <h2>Add a Habit</h2>
+
+            <input type="text" id="habitName" placeholder="Enter habit or goal">
+
+
+            <div class="label-box">
+
+                <label for="labelSelect">
+                    Select Labels (Maximum 3)
+                </label>
+
+                <select id="labelSelect">
+
+                    <option value="" disabled selected>
+                        Select a label
+                    </option>
+
+                    <option value="Health & Fitness">
+                        Health & Fitness
+                    </option>
+
+                    <option value="Academics">
+                        Academics
+                    </option>
+
+                    <option value="Family">
+                        Family
+                    </option>
+
+                    <option value="Home">
+                        Home
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+                <button onclick="addLabel()" class="small-btn">
+
+                    Add Label
+
+                </button>
+
+            </div>
+
+
+            <div id="labelList"></div>
+
+
+            <button onclick="addHabit()" class="add-btn">
+
+                Add Habit
+
+            </button>
+
+        </section>
+
+
+        <!-- Habit Tracker -->
+
+        <section class="section-box">
+
+            <div class="section-heading">
+
+                <h2>Habit Tracker</h2>
+
+                <div class="month-box">
+
+                    <label for="month">
+                        Month
+                    </label>
+
+                    <input type="month" id="month">
+
+                </div>
+
+            </div>
+
+
+            <div class="table-box">
+
+                <table id="habitTable">
+
+                    <thead>
+
+                        <tr id="dayRow">
+
+                            <th class="habit-heading">
+                                HABIT
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="habitList">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- Summary -->
+
+        <section class="section-box">
+
+            <div class="section-heading">
+
+                <h2>Summary</h2>
+
+                <select id="summaryType" onchange="showSummary()">
+
+                    <option value="month">
+                        This Month
+                    </option>
+
+                    <option value="week">
+                        This Week
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div id="summaryList">
+
+            </div>
+
+        </section>
+
+
+        <!-- Mostly Done -->
+
+        <section class="section-box">
+
+            <div class="summary-columns">
+
+                <div class="summary-card">
+
+                    <h2>Mostly Done</h2>
+
+                    <div id="mostlyDone">
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <h2>Mostly Not Done</h2>
+
+                    <div id="mostlyNotDone">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
